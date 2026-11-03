@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    body {
+        background-color: #171C26;
+        font-family: Arial, sans-serif;
+        color: #D5D9DF;
+        padding-bottom: 75px;
+    }
+
+    /* Navbar */
+    .navbar {
+        background-color: #222B38;
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #D5D9DF !important;
+    }
+
+    .nav-link:hover {
+        color: #B9A47C !important;
+    }
+
+    /* Profile */
+    .hero {
+        background-color: #222B38;
+        color: #E0E3E8;
+        border-radius: 16px;
+    }
+
+    .hero h4 {
+        color: #B9A47C !important;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 3px solid #B9A47C;
+    }
+
+    /* Cards */
+    .card {
+        background-color: #222B38;
+        color: #D5D9DF;
+        border: 1px solid #303C4A;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+    }
+
+    /* Titles */
+    .section-title {
+        color: #B9A47C;
+        font-weight: bold;
+        border-bottom: 2px solid #4A5360;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Skills */
+    .skill {
+        background-color: #303C4A;
+        color: #D5D9DF;
+        padding: 8px 14px;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 4px;
+    }
+
+    /* Project cards */
+    #projects .card {
+        background-color: #283342;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #222B38;
+        color: #B9A47C;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 18px;
+        text-align: center;
+        border-top: 1px solid #303C4A;
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">Nikola Tesla CV</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Про мене</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/education">Освіта</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/skills">Навички</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Проєкти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container py-5">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-4">
+    <p class="mb-0">© 2026 Nikola Tesla CV | Educational Project</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
